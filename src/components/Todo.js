@@ -33,14 +33,14 @@ export default function Todo(props) {
       <div className="btn-group">
         <button
           type="button"
-          className="btn todo-cancel"
+          className="btn todo-cancel rounded-pill"
           onClick={() => setEditing(false)}
         >
           {" "}
           Cancel
           <span className="visually-hidden">renaming {props.name}</span>
         </button>
-        <button type="submit" className="btn btn__primary todo-edit">
+        <button type="submit" className="btn btn__primary todo-edit rounded-pill">
           Save
           <span className="visually-hidden">Now editing: {props.name}</span>
         </button>
@@ -64,12 +64,12 @@ export default function Todo(props) {
       <div className="btn-group">
         <button
           type="button"
-          className="btn btn__danger"
+          className="btn btn__danger rounded-pill"
           onClick={() => props.deleteTask(props.id)}
         >
           Delete <span className="visually-hidden">{props.name}</span>
         </button>
-        <button type="button" className="btn" onClick={() => setEditing(true)}>
+        <button type="button" className="btn rounded-pill" onClick={() => setEditing(true)}>
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
       </div>

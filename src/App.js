@@ -7,8 +7,8 @@ import React, { useState } from "react";
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
  
-    function addTask(name) {
-      const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+    function addTask(name, dueDate) {
+      const newTask = { id: `todo-${nanoid()}`, name, dueDate, completed: false };
       setTasks([...tasks, newTask]);
       console.log(tasks)
     }
@@ -20,12 +20,12 @@ function App(props) {
       setTasks(remainingTasks);
     }
     
-    function editTask(id, newName) {
+    function editTask(id, newName, newDate) {
       const editedTaskList = tasks.map((task) => {
         // if this task has the same ID as the edited task
         if (id === task.id) {
           //
-          return { ...task, name: newName };
+          return { ...task, name: newName, dueDate: newDate };
         }
         return task;
       });
@@ -54,6 +54,7 @@ function App(props) {
     <Todo
       id={task.id}
       name={task.name}
+      dueDate={task.dueDate}
       completed={task.completed}
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}

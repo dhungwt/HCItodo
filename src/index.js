@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 //setting the seed values for tasks to be passed in as props in app.js
 const DATA = [
-  { id: "todo-0", name: "I'm a placeholder task! Feel free to delete me and add your own tasks above!", completed: true }
+  { id: "todo-0", name: "I'm a placeholder task! Feel free to delete me and add your own tasks above!", dueDate:"", priority:"Low", completed: true }
 ];
 
 

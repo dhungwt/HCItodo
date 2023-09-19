@@ -5,6 +5,7 @@ import React, { useState } from "react";
 function Form(props) {
 
   const [name, setName] = useState("");
+  const [dueDate, setDuedate] = useState(new Date())
 
   function handleChange(e) {
     setName(e.target.value);
@@ -20,11 +21,11 @@ function Form(props) {
   return (
     
     <form onSubmit={handleSubmit}>
-      <div class="form-floating mb-3">
+      <div class="form-floating mb-3 ">
       <input
         type="text"
         id="floatingTextarea"
-        class="form-control"
+        class="form-control form-control-lg "
         name="text"
         autoComplete="off"
         value = {name}
@@ -33,7 +34,7 @@ function Form(props) {
       />
        <label for="floatingTextarea">What do you need to get done?</label>
       </div>
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit " className="btn btn__primary btn__lg rounded-pill">
         Add
       </button>
     </form>

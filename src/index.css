@@ -4,10 +4,10 @@
 *::after {
   box-sizing: border-box;
 }
-/* *:focus {
+*:focus {
   outline: 3px dashed #228bec;
   outline-offset: 0;
-} */
+}
 html {
   font: 62.5% / 1.15 sans-serif;
 }
@@ -76,16 +76,7 @@ body {
   display: inline-block;
   margin-top: 0.4rem;
 }
-.form-floating {
-  /* Add more padding to the top and bottom to make the input taller */
-  padding: .5rem 0.8rem; /* You can adjust these values as needed */
-  border: 2px solid #565656; /* You can adjust the border styles as needed */
-}
 
-.input__lg {
-  /* Adjust the padding to make the input field taller */
-  padding: 2.5rem 1rem; /* You can adjust this value as needed */
-}
 .btn {
   padding: 0.8rem 1rem 0.7rem;
   border: 0.2rem solid #4d4d4d;

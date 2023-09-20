@@ -53,6 +53,9 @@ input {
 input[type="text"] {
   border-radius: 10px;
 }
+input[type="date"] {
+  border-radius: 10px;
+}
 body {
   width: 100%;
   max-width: 68rem;
@@ -84,10 +87,6 @@ body {
   cursor: pointer;
   text-transform: capitalize;
 }
-.btn:hover {
-  color : #blue;
-  
-}
 .btn.toggle-btn {
   border-width: 1px;
   border-color: #d3d3d3;
@@ -107,10 +106,6 @@ body {
 .btn__primary {
   color: #fff;
   background-color: #000;
-}
-.btn__primary:hover {
-  color : #fff;
-  
 }
 .btn-group {
   display: flex;

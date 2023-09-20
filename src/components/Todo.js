@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import moment from "moment";
 
 export default function Todo(props) {
   const [isEditing, setEditing] = useState(false);
@@ -63,7 +63,7 @@ export default function Todo(props) {
           defaultChecked={props.completed}
           onChange={() => props.toggleTaskCompleted(props.id)}
         />
-        <label className="todo-dueDate">Due Date: {props.dueDate}</label>
+        <label className="todo-dueDate">Due Date: {moment(props.dueDate).format("MM/DD/ YYYY")}  </label>
         <br/>
         <label className="todo-label" htmlFor={props.id}>
           {props.name}
@@ -77,13 +77,13 @@ export default function Todo(props) {
         >
           Delete <span className="visually-hidden">{props.name}</span>
         </button>
-        <button
+        {/* <button
           type="button"
           className="btn rounded-pill"
           onClick={() => setEditing(true)}
         >
           Edit <span className="visually-hidden">{props.name}</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );

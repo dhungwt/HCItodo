@@ -7,7 +7,9 @@ function Form(props) {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setTask((prevTask) => ({ //updating the previous state of the task with the new info that was input
+    //updating the previous state of the task with the new info that was input
+    console.log(value) //debug for form fix
+    setTask((prevTask) => ({ 
       ...prevTask,
       [name]: value,
     }));
@@ -15,7 +17,7 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault(); //prevents refreshing the page every time the form is edited
-    props.addTask(task); //pushes the new task on the tasklist array
+    props.addTask(task.name, task.dueDate); //pushes the new task on the tasklist array
     setTask({ name: "", dueDate: "" }); //resets the form
   }
 
@@ -27,7 +29,7 @@ function Form(props) {
           id="name"
           class="form-control form-control-lg"
           placeholder="What do you need to get done?"
-          name="text"
+          name="name"
           autoComplete="off"
           value={task.name}
           onChange={handleChange}
@@ -37,7 +39,7 @@ function Form(props) {
           id="dueDate"
           class="form-control form-control-lg"
           placeholder="When do you need to finish it by?"
-          name="text"
+          name="dueDate"
           autoComplete="off"
           value={task.dueDate}
           onChange={handleChange}

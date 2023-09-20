@@ -21,19 +21,20 @@ function Form(props) {
   return (
     
     <form onSubmit={handleSubmit}>
-      <div class="form-floating mb-3 ">
+      <div class="mb-3">
+      
       <input
         type="text"
         id="floatingTextarea"
-        class="form-control form-control-lg "
+        class="form-control form-control-lg" 
+        placeholder="What do you need to get done?"
         name="text"
         autoComplete="off"
         value = {name}
         onChange={handleChange}
-        // style="height: 100px"
+
       />
-       <label for="floatingTextarea">What do you need to get done?</label>
-      </div>
+</div>
       <button type="submit " className="btn btn__primary btn__lg rounded-pill">
         Add
       </button>

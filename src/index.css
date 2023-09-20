@@ -302,3 +302,12 @@ body {
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+.btn__primary:hover {
+  color : rgb(0, 238, 255);
+}
+.btn__danger:hover {
+  color : rgb(0, 238, 255);
+}
+.btn:hover {
+  color : rgb(0, 238, 255);
+}

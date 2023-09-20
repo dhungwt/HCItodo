@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
 export default function Todo(props) {
   const [isEditing, setEditing] = useState(false);
   const [newName, setNewName] = useState("");
+ 
 
   function handleChange(e) {
     setNewName(e.target.value);
@@ -14,7 +16,8 @@ export default function Todo(props) {
     setNewName("");
     setEditing(false);
   }
-  
+
+
 
   const editingTemplate = (
     <form className="stack-small" onSubmit={handleSubmit}>
@@ -40,7 +43,10 @@ export default function Todo(props) {
           Cancel
           <span className="visually-hidden">renaming {props.name}</span>
         </button>
-        <button type="submit" className="btn btn__primary todo-edit rounded-pill">
+        <button
+          type="submit"
+          className="btn btn__primary todo-edit rounded-pill"
+        >
           Save
           <span className="visually-hidden">Now editing: {props.name}</span>
         </button>
@@ -57,6 +63,8 @@ export default function Todo(props) {
           defaultChecked={props.completed}
           onChange={() => props.toggleTaskCompleted(props.id)}
         />
+        <label className="todo-dueDate">Due Date: {props.dueDate}</label>
+        <br/>
         <label className="todo-label" htmlFor={props.id}>
           {props.name}
         </label>
@@ -69,7 +77,11 @@ export default function Todo(props) {
         >
           Delete <span className="visually-hidden">{props.name}</span>
         </button>
-        <button type="button" className="btn rounded-pill" onClick={() => setEditing(true)}>
+        <button
+          type="button"
+          className="btn rounded-pill"
+          onClick={() => setEditing(true)}
+        >
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
       </div>

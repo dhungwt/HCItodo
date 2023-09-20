@@ -10,7 +10,7 @@ function App(props) {
     function addTask(name, dueDate) {
       const newTask = { id: `todo-${nanoid()}`, name, dueDate, completed: false };
       setTasks([...tasks, newTask]);
-      console.log(tasks)
+      console.log("INSIDE ADDTASKS: " + tasks)
     }
 
     function deleteTask(id) {

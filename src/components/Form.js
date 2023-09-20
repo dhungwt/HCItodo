@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 
+
 function Form(props) {
   // const [name, setName] = useState("");
   // const [dueDate, setDueDate] = useState('')
   const [task, setTask] = useState({ name: "", dueDate: "" });
+  
 
   function handleChange(e) {
     const { name, value } = e.target;
     //updating the previous state of the task with the new info that was input
-    console.log(value) //debug for form fix
-    setTask((prevTask) => ({ 
+    console.log("CURRENT CHANGE: " + value); //debug for form fix
+    setTask((prevTask) => ({
       ...prevTask,
       [name]: value,
     }));
   }
 
+
   function handleSubmit(e) {
     e.preventDefault(); //prevents refreshing the page every time the form is edited
+    console.log("Inside HandleSubmit: " + task.name + "  " + task.dueDate)
     props.addTask(task.name, task.dueDate); //pushes the new task on the tasklist array
     setTask({ name: "", dueDate: "" }); //resets the form
   }

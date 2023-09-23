@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import moment from "moment";
 
+
 export default function Todo(props) {
   const [isEditing, setEditing] = useState(false);
   const [newName, setNewName] = useState("");
- 
 
   function handleChange(e) {
     setNewName(e.target.value);
@@ -16,8 +16,6 @@ export default function Todo(props) {
     setNewName("");
     setEditing(false);
   }
-
-
 
   const editingTemplate = (
     <form className="stack-small" onSubmit={handleSubmit}>
@@ -56,15 +54,17 @@ export default function Todo(props) {
 
   const viewTemplate = (
     <div className="stack-small">
-      <div className="c-cb">
+      <div className={`c-cb ` + props.category}>
         <input
           id={props.id}
           type="checkbox"
           defaultChecked={props.completed}
           onChange={() => props.toggleTaskCompleted(props.id)}
         />
-        <label className="todo-dueDate">Due Date: {moment(props.dueDate).format("MM/DD/ YYYY")}  </label>
-        <br/>
+        <label className="todo-dueDate">
+          Due Date: {moment(props.dueDate).format("MM/DD/ YYYY")}{" "}
+        </label>
+        <br />
         <label className="todo-label" htmlFor={props.id}>
           {props.name}
         </label>
@@ -88,5 +88,9 @@ export default function Todo(props) {
     </div>
   );
 
-  return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+  return (
+    <li className="todo">
+      {isEditing ? editingTemplate : viewTemplate}
+    </li>
+  );
 }

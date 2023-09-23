@@ -78,7 +78,22 @@ body {
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
+}
 
+.form-control {
+  font-size: 24px !important;
+}
+
+.School {
+  background-color: green;
+}
+
+.Personal {
+  background-color: yellow;
+}
+
+.Work {
+  background-color: blue;
 }
 
 .btn {
@@ -299,10 +314,18 @@ body {
 }
 .btn__primary:hover {
   color : rgb(0, 238, 255);
+  box-shadow: 5px 10px #888888
 }
 .btn__danger:hover {
   color : rgb(0, 238, 255);
+  box-shadow: 5px 10px #888888
 }
 .btn:hover {
   color : rgb(0, 238, 255);
+  box-shadow: 5px 10px #888888
 }
+input[type="radio"] {
+  appearance: none;
+  outline: none;
+  accent-color: pink;
+}        

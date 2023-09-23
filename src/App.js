@@ -7,8 +7,8 @@ import React, { useState } from "react";
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
  
-    function addTask(name, dueDate) {
-      const newTask = { id: `todo-${nanoid()}`, name, dueDate, completed: false };
+    function addTask(name, dueDate, category) {
+      const newTask = { id: `todo-${nanoid()}`, name, dueDate, category, completed: false };
       setTasks([...tasks, newTask]);
       console.log("INSIDE ADDTASKS: " + tasks)
     }
@@ -39,6 +39,7 @@ function App(props) {
         if (id === task.id) {
           // use object spread to make a new object
           // whose `completed` prop has been inverted
+          
           return { ...task, completed: !task.completed };
         }
         //if ids dont match, return original obj
@@ -55,6 +56,7 @@ function App(props) {
       id={task.id}
       name={task.name}
       dueDate={task.dueDate}
+      category={task.category}
       completed={task.completed}
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}

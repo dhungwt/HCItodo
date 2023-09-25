@@ -62,7 +62,7 @@ export default function Todo(props) {
           onChange={() => props.toggleTaskCompleted(props.id)}
         />
         <label className="todo-dueDate">
-          Due Date: {moment(props.dueDate).format("MM/DD/ YYYY")}{" "}
+          Due Date: {moment(props.dueDate).format("MM/DD/YYYY")}{" "}
         </label>
         <br />
         <label className="todo-label" htmlFor={props.id}>

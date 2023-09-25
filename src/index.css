@@ -64,7 +64,7 @@ body {
     1.6rem/1.25 Arial,
     sans-serif;
   background-color: #f5f5f5;
-  color: #4d4d4d;
+  color: #000000;
   background-image: url("https://1.bp.blogspot.com/-IzZ96IxG36E/XAnwE5a760I/AAAAAAABQt4/z5ROb5hWKVM51yduh-ozMYAefQm8RmnSwCLcBGAs/s400/pattern_uroko.jpg");
 }
 @media screen and (min-width: 620px) {
@@ -85,15 +85,15 @@ body {
 }
 
 .School {
-  background-color: green;
+  background-color: #7BE332;
 }
 
 .Personal {
-  background-color: yellow;
+  background-color: #92D4F6;
 }
 
 .Work {
-  background-color: blue;
+  background-color: #FC6AD4;
 }
 
 .btn {
@@ -239,7 +239,7 @@ body {
   width: 100%;
   min-height: 4.4rem;
   padding: 0.4rem 0.8rem;
-  border: 2px solid #565656;
+  border: 2px solid #000000;
 }
 .todo-text:focus {
   box-shadow: inset 0 0 0 2px;

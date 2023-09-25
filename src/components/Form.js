@@ -28,22 +28,23 @@ function Form(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
+      What do you need to get done?
         <input
           type="text"
           id="name"
           className="form-control form-control-lg"
-          placeholder="What do you need to get done?"
+          placeholder="Enter your task here..."
           name="name"
           autoComplete="off"
           value={task.name}
           onChange={handleChange}
           required
         />
+        When do you need to finish it by?
         <input
           type="date"
           id="dueDate"
           className="form-control form-control-lg"
-          placeholder="When do you need to finish it by?"
           name="dueDate"
           autoComplete="off"
           value={task.dueDate}
@@ -51,7 +52,7 @@ function Form(props) {
           required
         />
       </div>
-      What category is this task?
+      What category is this task? (Tasks are "Personal" by default)
       <div className="row align-items-start">
         <div className="col">
           <div className="form-check">

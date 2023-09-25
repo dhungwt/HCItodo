@@ -102,6 +102,11 @@ body {
   cursor: pointer;
   text-transform: capitalize;
 }
+.btn:active {
+  background-color: #747b74;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .btn.toggle-btn {
   border-width: 1px;
   border-color: #d3d3d3;
@@ -114,6 +119,7 @@ body {
   color: #fff;
   background-color: #ca3c3c;
   border-color: #bd2130;
+  font-size: 14px;
 }
 .btn__filter {
   border-color: lightgrey;

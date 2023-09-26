@@ -102,8 +102,9 @@ body {
   cursor: pointer;
   text-transform: capitalize;
 }
-.btn:active {
-  background-color: #747b74;
+/* press animation for button */
+.btn:active { 
+  background-color: #ffffff;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

@@ -49,8 +49,7 @@ function App(props) {
         if (updatedTask.completed) { //triggers a toast notification when a checkbox is checked
           toast.success("Task completed! Keep up the good work!", { position: "top-right" });
         }
-        // use object spread to make a new object
-        // whose `completed` prop has been inverted
+        // returns updated tasklist with the new task that has a checkbox checked or unchecked
         return updatedTask;
       }
       //if ids dont match, return original obj

@@ -49,7 +49,7 @@ function App(props) {
         if (updatedTask.completed) { //triggers a toast notification when a checkbox is checked
           toast.success("Task completed! Keep up the good work!", { position: "top-right" });
         }
-        // returns updated tasklist with the new task that has a checkbox checked or unchecked
+        // returns updated task with updated checkbox
         return updatedTask;
       }
       //if ids dont match, return original obj

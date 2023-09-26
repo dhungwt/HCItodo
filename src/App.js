@@ -44,6 +44,7 @@ function App(props) {
     const updatedTasks = tasks.map((task) => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
+        //new const that stores the inverted state of the checkbox (completed variable)
         const updatedTask = { ...task, completed: !task.completed };
 
         if (updatedTask.completed) { //triggers a toast notification when a checkbox is checked

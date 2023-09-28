@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/hcitodo/static/css/main.85e1fc36.css",
-    "main.js": "/hcitodo/static/js/main.dc8d4343.js",
-    "index.html": "/hcitodo/index.html",
-    "main.85e1fc36.css.map": "/hcitodo/static/css/main.85e1fc36.css.map",
-    "main.dc8d4343.js.map": "/hcitodo/static/js/main.dc8d4343.js.map"
+    "main.css": "/static/css/main.85e1fc36.css",
+    "main.js": "/static/js/main.dc8d4343.js",
+    "index.html": "/index.html",
+    "main.85e1fc36.css.map": "/static/css/main.85e1fc36.css.map",
+    "main.dc8d4343.js.map": "/static/js/main.dc8d4343.js.map"
   },
   "entrypoints": [
     "static/css/main.85e1fc36.css",

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hcitodo/static/css/main.85e1fc36.css",
+    "main.js": "/hcitodo/static/js/main.dc8d4343.js",
+    "index.html": "/hcitodo/index.html",
+    "main.85e1fc36.css.map": "/hcitodo/static/css/main.85e1fc36.css.map",
+    "main.dc8d4343.js.map": "/hcitodo/static/js/main.dc8d4343.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85e1fc36.css",
+    "static/js/main.dc8d4343.js"
+  ]
+}

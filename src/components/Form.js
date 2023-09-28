@@ -52,7 +52,7 @@ function Form(props) {
           required
         />
       </div>
-      What category is this task? (Tasks are "Personal" by default)
+      What category is this task? 
       <div className="row align-items-start">
         <div className="col">
           <div className="form-check">
